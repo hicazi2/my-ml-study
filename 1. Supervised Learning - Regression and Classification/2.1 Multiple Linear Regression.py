@@ -125,8 +125,8 @@ def gradient_descent(x, y, w_in, b_in, cost_function, gradient_function, alpha, 
     
     w = copy.deepcopy(w_in) #avoid modifying global w within function
     b = b_in
-    dj_dw, dj_db = gradient_function(x,y,w,b)
     for i in range(num_iters):
+        dj_dw, dj_db = gradient_function(x,y,w,b)
         w += -alpha* dj_dw
         b += -alpha*dj_db
     
